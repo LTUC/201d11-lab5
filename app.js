@@ -9,12 +9,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+    var res = a + b;
+    var msg = `The sum of ${a} and ${b} is ${res}.`;
+    var sumValues = [res, msg]; 
+    return sumValues; 
 }
-
+sum(4,7);
+console.log(sum(4,7));
 // Here is the test for sum(); uncomment it to run it
 //4,7
-// testSum();
+testSum();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
