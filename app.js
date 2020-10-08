@@ -58,11 +58,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-   var FirstFun=sum(a,b)[0];
-   var result = sum(FirstFun,c)[0]; 
-   var secFunc= multiply(a,b)[0];
-   var secResult =multiply(secFunc,c)[0];
-    return [result,secResult,`${a} and ${b} and ${c} sum to ${result}.`, `The product of ${a} and ${b} and ${c} is ${secResult}.`];
+    var FirstFun = sum(a, b)[0];
+    var result = sum(FirstFun, c)[0];
+    var secFunc = multiply(a, b)[0];
+    var secResult = multiply(secFunc, c)[0];
+    return [result, secResult, `${a} and ${b} and ${c} sum to ${result}.`, `The product of ${a} and ${b} and ${c} is ${secResult}.`];
 }
 console.log(sumAndMultiply(4, 7, 5));
 testSumAndMultiply();
@@ -87,11 +87,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  var firstArr = sum(testArray[0],testArray[1])[0];
-  console.log(firstArr);
-  var secArr = sum(firstArr,testArray[2])[0];
-  console.log (secArr);
-  return [secArr,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${secArr} is their sum.`];
+    var firstArr = sum(testArray[0], testArray[1])[0];
+    console.log(firstArr);
+    var secArr = sum(firstArr, testArray[2])[0];
+    console.log(secArr);
+    return [secArr, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${secArr} is their sum.`];
 }
 console.log(sumArray(testArray));
 testSumArray();
@@ -114,11 +114,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
- var firstArray = multiply(testArray[0],testArray[1])[0];
- console.log(firstArray);
- var secArray = multiply(firstArray,testArray[2])[0];
- console.log(secArray);
- return [secArray,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${secArray}.`];
+    var firstArray = multiply(testArray[0], testArray[1])[0];
+    console.log(firstArray);
+    var secArray = multiply(firstArray, testArray[2])[0];
+    console.log(secArray);
+    return [secArray, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${secArray}.`];
 }
 console.log(multiplyAnyArray(testArray));
 testMultiplyArray();
@@ -147,10 +147,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+var i = 0;
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    var testDynamicArray = [1, 2, 3, 4, 5];
+    var multiplyResult=1;
+    for (var i = 0; i < testDynamicArray.length; i++) {
+        var multiplyAnyArr = multiply(testDynamicArray[i],multiplyResult)[0];
+        console.log (multiplyAnyArr)
+        var multiplyResult = (multiplyAnyArr); 
+        
+    }
+    console.log (multiplyResult);
+    return [multiplyResult,`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${multiplyResult}.`]
+    
 }
+console.log(multiplyAnyArray(testDynamicArray));
+testMultiplyAnyArray();
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testDynamicArray
