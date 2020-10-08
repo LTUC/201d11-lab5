@@ -80,12 +80,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    var total = 0;
+    for (var i=0 ; i<sumArr.length; i++){
+        total = sum(total,sumArr[i])[0];
+    } 
+    return [total, sumArr +` was passed in as an array of numbers, and `+ total +` is their sum.`];
 
 }
+//console.log (sumArray(2,3,4));
 
 // Here is the test for sumArray(); uncomment it to run it
 //testArray
-// testSumArray();
+testSumArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -101,12 +107,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    var equal = 1;
+    for (var j = 0 ; j < multArr.length; j++){
+        equal = multiply(equal, multArr[j])[0];
+    }
+    return [equal,`The numbers ` + multArr + ` have a product of ` + equal + `.`];
 }
-
+//console.log (multiplyfirst,multiplysecond);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testArray
-// testMultiplyArray();
+testMultiplyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
