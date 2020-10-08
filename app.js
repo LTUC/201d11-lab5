@@ -60,7 +60,7 @@ return [ sumResult,multiplyResult,"4 and 7 and 5 sum to 16.","The product of 4 a
 
 }
 
-// Here is the test for sumAndMultiply(); uncomment it to run it
+ // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
 testSumAndMultiply();
 
@@ -80,12 +80,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var sumA4 = sum( sumArr[0],sumArr[1]);
+var sumA5 = sum(sumA4[0],sumArr[2]);
+console.log (sumA5);
+var msg = sumArr[0]+',' + sumArr[1]+',' + sumArr[2]+' was passed in as an array of numbers, and '+ sumA5[0] +' is their sum.';
+return [sumA5[0],msg];
 }
-
 // Here is the test for sumArray(); uncomment it to run it
-//testArray
-// testSumArray();
+console.log(sumArray(testArray));
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
