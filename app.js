@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
- var sum = a+b;
- var msg = `The sum of ${a} and ${b} is ${sum}.`
- return [sum, msg]
+    var sum = a + b;
+    var msg = `The sum of ${a} and ${b} is ${sum}.`
+    return [sum, msg]
 }
 // sum(3,9);
 // Here is the test for sum(); uncomment it to run it
@@ -30,9 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-var mult = a*b;
-var msg = `The product of ${a} and ${b} is ${mult}.`
-return [mult, msg]
+    var mult = a * b;
+    var msg = `The product of ${a} and ${b} is ${mult}.`
+    return [mult, msg]
 }
 // multiply(4*5);
 // Here is the test for multiply(); uncomment it to run it
@@ -55,17 +55,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var array = [];
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-// var firstSum = sum(a,b); 
-// console.log(firstSum);
+    // var firstSum = sum(a,b); 
+    // console.log(firstSum);
 
-var summation = sum(a,b)[0] + c;
-var multiplication = multiply(a,b)[0]*c;
+    var summation = sum(a, b)[0] + c;
+    var multiplication = multiply(a, b)[0] * c;
 
-var msgSum = `${a} and ${b} and ${c} sum to ${summation}.`;
-var msgMult = `The product of ${a} and ${b} and ${c} is ${multiplication}.`
+    var msgSum = `${a} and ${b} and ${c} sum to ${summation}.`;
+    var msgMult = `The product of ${a} and ${b} and ${c} is ${multiplication}.`
 
-array.push(summation, multiplication, msgSum, msgMult);
-return array
+    array.push(summation, multiplication, msgSum, msgMult);
+    return array
 }
 // sumAndMultiply(5, 5, 5);
 
@@ -89,11 +89,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-    var totOfArr = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
-    console.log(totOfArr);
+    var totOfArr = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
     return [totOfArr, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${totOfArr} is their sum.`]
-    }
-    
+}
+
 // sumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 //testArray
@@ -112,10 +111,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-var multArr = [2,3,4];
+var multArr = [2, 3, 4];
 function multiplyArray(multArr) { //eslint-disable-line
-var multOfArr = multiply(multiply(multArr[0],multArr[1])[0],multArr[2])[0];
-return [multOfArr, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multOfArr}.`]
+    var multOfArr = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    return [multOfArr, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multOfArr}.`]
 }
 // multiplyArray(multArr);
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -141,14 +140,20 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5];  //eslint-disable-line
+function multiplyAnyArray(DynamicArray) { //eslint-disable-line
+    
+    var arrayMult=1;
+    for (var i = 0; i <DynamicArray.length; i++) {
+        arrayMult = multiply(arrayMult, DynamicArray[i])[0];
+    }
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    return [arrayMult, `The numbers ${DynamicArray} have a product of ${arrayMult}.`]; 
 }
-
+// multiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testDynamicArray
-// testMultiplyAnyArray();
+testMultiplyAnyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+
