@@ -12,10 +12,7 @@ function sum(a, b) { //eslint-disable-line
     var result = a+b;
     return [result, `The sum of ${a} and ${b} is ${result}.`]
 }
-console.log (sum(2,3));
-
-// Here is the test for sum(); uncomment it to run it
-//4,7
+// console.log (sum(2,3)); // to check if question1 is correct
 testSum();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -24,18 +21,14 @@ testSum();
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
-"The product of 5 and 9 is 45."
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
-
+"The product of 5 and 9 is 45."*/
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    var result = a*b;
+    return  [result, `The product of ${a} and ${b} is ${result}.`]
 }
-
-// Here is the test for multiply(); uncomment it to run it
-//5,9
-// testMultiply();
+//console.log (multiply(2,3)); // to check if question2 its working
+testMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
