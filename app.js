@@ -8,9 +8,13 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
+function sum(a, b) { //eslint-disable-linea
+    var result = a + b;
+    return [result, `The sum of ${a} and ${b} is ${result}.`]
 
 }
+console.log(sum(4, 7));
+testSum();
 
 // Here is the test for sum(); uncomment it to run it
 //4,7
@@ -28,8 +32,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    var multResult = a * b;
+    return [multResult, `The product of ${a} and ${b} is ${multResult}.`]
 
 }
+console.log(multiply(5, 9));
+testMultiply();
 
 // Here is the test for multiply(); uncomment it to run it
 //5,9
@@ -50,8 +58,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    var FirstFun = sum(a, b)[0];
+    var result = sum(FirstFun, c)[0];
+    var secFunc = multiply(a, b)[0];
+    var secResult = multiply(secFunc, c)[0];
+    return [result, secResult, `${a} and ${b} and ${c} sum to ${result}.`, `The product of ${a} and ${b} and ${c} is ${secResult}.`];
 }
+console.log(sumAndMultiply(4, 7, 5));
+testSumAndMultiply();
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
@@ -73,8 +87,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var firstArr = sum(testArray[0], testArray[1])[0];
+    console.log(firstArr);
+    var secArr = sum(firstArr, testArray[2])[0];
+    console.log(secArr);
+    return [secArr, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${secArr} is their sum.`];
 }
+console.log(sumArray(testArray));
+testSumArray();
 
 // Here is the test for sumArray(); uncomment it to run it
 //testArray
@@ -94,8 +114,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    var firstArray = multiply(testArray[0], testArray[1])[0];
+    console.log(firstArray);
+    var secArray = multiply(firstArray, testArray[2])[0];
+    console.log(secArray);
+    return [secArray, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${secArray}.`];
 }
+console.log(multiplyAnyArray(testArray));
+testMultiplyArray();
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testArray
@@ -120,11 +146,23 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    var testDynamicArray = [1, 2, 3, 4, 5];
+    var multiplyResult=1;
+    for (var i = 0; i < testDynamicArray.length; i++) {
+        var multiplyAnyArr = multiply(testDynamicArray[i],multiplyResult)[0];
+        console.log (multiplyAnyArr)
+        var multiplyResult = (multiplyAnyArr); 
+        
+    }
+    console.log (multiplyResult);
+    return [multiplyResult,`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${multiplyResult}.`]
+    
 }
+console.log(multiplyAnyArray(testDynamicArray));
+testMultiplyAnyArray();
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testDynamicArray
