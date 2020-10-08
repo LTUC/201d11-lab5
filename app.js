@@ -8,12 +8,12 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a,b) { //eslint-disable-linea
-    var result = a+b;
-    return [result,`The sum of ${a} and ${b} is ${result}.`]
+function sum(a, b) { //eslint-disable-linea
+    var result = a + b;
+    return [result, `The sum of ${a} and ${b} is ${result}.`]
 
 }
-console.log (sum (4,7));
+console.log(sum(4, 7));
 testSum();
 
 // Here is the test for sum(); uncomment it to run it
@@ -32,11 +32,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    var multResult = a*b;
-    return [multResult,`The product of ${a} and ${b} is ${multResult}.`]
+    var multResult = a * b;
+    return [multResult, `The product of ${a} and ${b} is ${multResult}.`]
 
 }
-console.log(multiply(5,9));
+console.log(multiply(5, 9));
 testMultiply();
 
 // Here is the test for multiply(); uncomment it to run it
@@ -58,12 +58,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sum =a+b+c;
-    var multiply = a*b*c
-    return[sum,multiply,`${a} and ${b} and ${c} sum to ${sum}.`,`The product of ${a} and ${b} and ${c} is ${multiply}.`]
-
+   var FirstFun=sum(a,b)[0];
+   var result = sum(FirstFun,c)[0]; 
+   var secFunc= multiply(a,b)[0];
+   var secResult =multiply(secFunc,c)[0];
+    return [result,secResult,`${a} and ${b} and ${c} sum to ${result}.`, `The product of ${a} and ${b} and ${c} is ${secResult}.`];
 }
-console.log(sumAndMultiply(4,7,5));
+console.log(sumAndMultiply(4, 7, 5));
 testSumAndMultiply();
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -133,7 +134,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
