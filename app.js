@@ -14,8 +14,7 @@ function sum(a, b) { //eslint-disable-line
     var sumValues = [res, msg]; 
     return sumValues; 
 }
-sum(4,7);
-console.log(sum(4,7));
+
 // Here is the test for sum(); uncomment it to run it
 //4,7
 testSum();
@@ -38,8 +37,6 @@ function multiply(a, b) { //eslint-disable-line
     return mulValues; 
 }
 
-multiply(5,9);
-console.log(multiply(5,9));
 // Here is the test for multiply(); uncomment it to run it
 //5,9
 testMultiply();
@@ -70,8 +67,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     var funcVAlues = [finalAddRes,finalMulRes,addMsg,mulMsg];
     return funcVAlues;
 }
-sumAndMultiply(4,7,5);
-console.log(sumAndMultiply(4,7,5));
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
 testSumAndMultiply();
@@ -92,12 +88,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var totalSum = 0;
+    for(var i=0; i<sumArr.length; i++){
+        totalSum = sum(totalSum, sumArr[i])[0];
+    }
+    var msg = `${sumArr} was passed in as an array of numbers, and ${totalSum} is their sum.`
+    var funReturn = [totalSum, msg];
+    return funReturn;
 }
-
 // Here is the test for sumArray(); uncomment it to run it
 //testArray
-// testSumArray();
+testSumArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
