@@ -77,14 +77,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 var sumNum;
 function sumArray([a,b,c]) { //eslint-disable-line
+    
     sumNum = sum(sum(a, b)[0], c)[0];
 
     // for (var i=0; i<testArray.length; i++){
     //     sumNum += testArray[i];
     //     console.log(sumNum);
     // }
-    // return [sumNum, `2,3,4 was passed in as an array of numbers, and ${sumNum} is their sum.`];
-    //sumArray([]);
+    // return [sumNum, `${testArray} was passed in as an array of numbers, and ${sumNum} is their sum.`];
+
     return [sumNum, `${a},${b},${c} was passed in as an array of numbers, and ${sumNum} is their sum.`];
     
 }
