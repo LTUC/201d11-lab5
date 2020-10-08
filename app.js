@@ -13,11 +13,11 @@ function sum(a, b) { //eslint-disable-line
     return [result , `The sum of ${a} and ${b} is ${result}.`]
     
 }
+testSum();
 //console.log(sum(2,3)); 
 
 // Here is the test for sum(); uncomment it to run it
 //4,7
-testSum();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -31,12 +31,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+ var result = a * b;
+return[result , `The product of ${a} and ${b} is 45.`];
 }
-
+//console.log(multiply(3,5));
+testMultiply();
 // Here is the test for multiply(); uncomment it to run it
 //5,9
-// testMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
