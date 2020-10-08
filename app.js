@@ -148,7 +148,7 @@ function multiplyAnyArray(DynamicArray) { //eslint-disable-line
         arrayMult = multiply(arrayMult, DynamicArray[i])[0];
     }
 
-    return [arrayMult, `The numbers ${testDynamicArray} have a product of ${arrayMult}.`]; 
+    return [arrayMult, `The numbers ${DynamicArray} have a product of ${arrayMult}.`]; 
 }
 // multiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
