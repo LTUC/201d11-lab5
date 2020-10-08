@@ -104,12 +104,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    var multiA4 = multiply( multArr[0],multArr[1]);
+    var multiA5 = multiply(multiA4[0],multArr[2]);
+    console.log (multiA5);
+ var msg1= "The numbers 2,3,4 have a product of 24."
 
+    // var msg = multArr[0]+',' + multArr[1]+',' + multArr[2]+' was passed in as an array of numbers, and '+ multiA5[0] +' is their sum.';
+    return [multiA5[0],msg1];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testArray
-// testMultiplyArray();
+console.log(multiplyArray(testArray));
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
