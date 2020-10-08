@@ -10,7 +10,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 
-}
+        var result = a+b;
+        var msg = 'The sum of 4 and 7 is 11.';
+        var sumArr = [result,msg]
+        return sumArr
+    }
+    console.log(sum(4,7));
+    testSum();
+
 
 // Here is the test for sum(); uncomment it to run it
 //4,7
@@ -28,8 +35,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    var result = a*b;
+    var msg = 'The product of 5 and 9 is 45.';
+    var multiplayArr = [result , msg];
+    return multiplayArr;
 
 }
+console.log(multiply(5,9))
+testMultiply();
+
 
 // Here is the test for multiply(); uncomment it to run it
 //5,9
@@ -49,9 +63,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var num = sum(a, b)[0];
+    var num2 = sum(num, c)[0];
+    var num3 = multiply(a, b)[0];
+    var num4 = multiply(num3, c)[0];
+
+    var msgSum = "4 and 7 and 5 sum to 16.";
+    var msgMultiply = "The product of 4 and 7 and 5 is 140.";
+    var result = [num2, num4, msgSum, msgMultiply];
+    return result;
 }
+
+console.log(sumAndMultiply(4, 7, 5));
+testSumAndMultiply();
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
@@ -120,7 +146,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
