@@ -83,6 +83,7 @@ function sumArray(sumArr) { //eslint-disable-line
     var total = 0;
     for (var i=0 ; i<sumArr.length; i++){
         total = sum(total,sumArr[i])[0];
+
     } 
     return [total, sumArr +` was passed in as an array of numbers, and `+ total +` is their sum.`];
 
