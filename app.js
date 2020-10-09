@@ -115,8 +115,19 @@ function multiplyArray(multArr) { //eslint-disable-line
     return[result,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result}.`];
 
 }
+
+let arrElements=''; // for print the array element in the question 6
 function myMultiplyArr(arr){ // my function to calculate the multiply of array elements.
-    let multiply = arr.reduce((acc,element)=>{return acc*=element},1);
+
+    arrElements=''; //for reset the string to be empty.
+    let multiply = arr.reduce((acc,element,index)=>{
+        if(index === arr.length-1){  // this if else just for question 6 you can ignore it for question 5. it wont affect the solution.
+            arrElements+=`${arr[index]}`;  // for add last element without comma to the string. for question 6
+        }
+        else{
+            arrElements+=`${arr[index]},` // for add the array element with comma to the string. for question 6
+        }
+        return acc*=element},1);
     return multiply;
 }
 
@@ -146,11 +157,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let result = myMultiplyArr(dynamicArray);
+    return [result,`The numbers ${arrElements} have a product of ${result}.`]
 }
+
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testDynamicArray
-// testMultiplyAnyArray();
+testMultiplyAnyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
